@@ -1,6 +1,0 @@
-name: TPSystem
-version: '${project.version}'
-main: de.cellum.tpsystem.TPSystem
-api-version: '1.19'
-prefix: TPSystem
-authors: [Cellum]
