@@ -1,0 +1,8 @@
+name: TPSystem
+version: '1.0-SNAPSHOT'
+main: de.cellum.tpsystem.main.Main
+api-version: '1.19'
+prefix: TPSystem
+authors: [C377UM]
+commands:
+   tpsystem:
