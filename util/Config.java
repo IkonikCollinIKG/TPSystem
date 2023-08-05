@@ -82,12 +82,7 @@ public class Config {
         config.addDefault("Perms.admin", "tpsystem.admin");
         config.addDefault("Perms.tpuse", "tpsystem.tpuse");
         config.addDefault("Perms.createSign", "tpsystem.createSign");
-        config.options().copyDefaults(true);
-        Main.getPlugin().saveConfig();
-    }
-    public static void Countdown() {
-        FileConfiguration config = Main.getPlugin().getConfig();
-        config.addDefault("Countdown.time", "20");
+        config.addDefault("Perms.skipCountdown", "tpsystem.skipCountdown");
         config.options().copyDefaults(true);
         Main.getPlugin().saveConfig();
     }

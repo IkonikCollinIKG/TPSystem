@@ -24,8 +24,8 @@ public final class Main extends JavaPlugin {
         plugin = this;
         TPPointsConfig();
         PermsFileConfig();
-        CountdownConfig();
         Objects.requireNonNull(getCommand("tpsystem")).setExecutor(new AdminCommands());
+        Objects.requireNonNull(getCommand("skipcount")).setExecutor(new TPManager());
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new TPGui(), this);
         pm.registerEvents(new SignListener(), this);
@@ -54,15 +54,6 @@ public final class Main extends JavaPlugin {
         Config.PermsFileWriteDefaultConfig();
         if (config.getConfigurationSection("Perms") == null){
             config.createSection("Perms");
-            config.options().copyDefaults(true);
-            getPlugin().saveConfig();
-        }
-    }
-    public void CountdownConfig(){
-        FileConfiguration config = Main.getPlugin().getConfig();
-        Config.Countdown();
-        if (config.getConfigurationSection("Countdown") == null){
-            config.createSection("Countdown");
             config.options().copyDefaults(true);
             getPlugin().saveConfig();
         }

@@ -8,14 +8,13 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class AdminCommands implements CommandExecutor {
     @Override
-    public boolean onCommand(CommandSender sender, @NotNull Command cmd, @NotNull String label, String[] args) {
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player player = (Player) sender;
         if (sender.hasPermission(Objects.requireNonNull(Main.getPlugin().getConfig().getString("Perms.admin")))){
             if (args[0].equals("setpoint")){
@@ -99,10 +98,6 @@ public class AdminCommands implements CommandExecutor {
                 if (args[0].equals("gui")){
                     TPGui.openTPGUI(player);
                     player.sendMessage(Main.getPrefix() + "Admin GUI geöffnet!");
-                }else {
-                    if ((args[0].equals(""))){
-                        player.sendMessage(Main.getPrefix() + "Running TPSystem v.1.0 by Cellum");
-                    }
                 }
             }
         }else {

@@ -98,6 +98,7 @@ public class TPGui implements Listener {
         ItemStack Nix = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
         ItemMeta nixData = Nix.getItemMeta();
         nixData.setDisplayName("§c");
+        nixData.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         Nix.setItemMeta(nixData);
 
         //GUi Gegenstände setzten
